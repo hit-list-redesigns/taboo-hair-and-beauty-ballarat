@@ -258,8 +258,10 @@ p{margin:0;text-wrap:pretty}
 .team{margin-top:clamp(96px,11vw,150px)}
 .team-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:clamp(20px,3vw,40px);margin-top:48px}
 .member{display:flex;flex-direction:column;gap:18px}
-.member-ph{aspect-ratio:5/4;background-color:var(--mulberry);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 72 60' fill='none' stroke='%23c4a9b4' stroke-opacity='.28' stroke-width='2'%3E%3Cpath d='M0 3H72M0 9H72M0 57H72M36 9v7M36 46v11M0 9c0 13 14 11 14 21 0 8-8 10-10 4M72 9c0 13-14 11-14 21 0 8 8 10 10 4'/%3E%3Ccircle cx='36' cy='31' r='15'/%3E%3Ccircle cx='36' cy='31' r='4.5'/%3E%3Ccircle cx='0' cy='48' r='5'/%3E%3Ccircle cx='72' cy='48' r='5'/%3E%3C/svg%3E");background-size:72px 60px;display:flex;align-items:flex-end;padding:18px;position:relative}
-.member-ph::before{content:"";position:absolute;inset:8px;border:1px solid rgba(196,169,180,.3)}
+.member-ph{aspect-ratio:4/5;overflow:hidden;background-color:var(--mulberry);background-image:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 72 60' fill='none' stroke='%23c4a9b4' stroke-opacity='.28' stroke-width='2'%3E%3Cpath d='M0 3H72M0 9H72M0 57H72M36 9v7M36 46v11M0 9c0 13 14 11 14 21 0 8-8 10-10 4M72 9c0 13-14 11-14 21 0 8 8 10 10 4'/%3E%3Ccircle cx='36' cy='31' r='15'/%3E%3Ccircle cx='36' cy='31' r='4.5'/%3E%3Ccircle cx='0' cy='48' r='5'/%3E%3Ccircle cx='72' cy='48' r='5'/%3E%3C/svg%3E");background-size:72px 60px;display:flex;align-items:flex-end;padding:18px;position:relative}
+.member-ph::before{content:"";position:absolute;inset:8px;border:1px solid rgba(227,231,229,.45);z-index:1;pointer-events:none}
+.member-ph img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover}
+.member-ph .ph{position:relative;z-index:2;background:var(--mulberry-deep)}
 .member h3{font-size:1.9rem}
 .member p{color:var(--slate-soft);font-size:.9375rem;max-width:36ch}
 .member .role{font-weight:600;color:var(--slate);font-size:.9375rem;margin-top:-10px}
@@ -350,7 +352,7 @@ p{margin:0;text-wrap:pretty}
   .choice-grid{grid-template-columns:1fr}
   .choice label{min-height:0}
   .team-grid{grid-template-columns:1fr}
-  .member-ph{aspect-ratio:16/10}
+  .member-ph{aspect-ratio:4/3}
   .foot-grid{grid-template-columns:1fr}
   .frieze{height:44px}
   .rows .nm i{display:block}
@@ -621,19 +623,19 @@ p{margin:0;text-wrap:pretty}
       </div>
       <div class="team-grid">
         <div class="member">
-          <div class="member-ph"><span class="ph on-dark">Photo</span></div>
+          <div class="member-ph"><img loading="lazy" src="https://images.unsplash.com/photo-1616970092942-4f83f6d91c94?w=800&q=70&auto=format&fit=crop" width="800" height="1000" style="object-position:50% 30%" alt="Placeholder portrait: a stylist seated in a salon beside a mirror"><span class="ph on-dark">Placeholder photo</span></div>
           <h3>Team member name</h3>
           <p class="role">Role, e.g. owner &amp; stylist</p>
           <p>Two lines on what they love doing and what clients book them for. Supplied by the salon.</p>
         </div>
         <div class="member">
-          <div class="member-ph"><span class="ph on-dark">Photo</span></div>
+          <div class="member-ph"><img loading="lazy" src="https://images.unsplash.com/photo-1586448127354-6017a26ce03c?w=800&q=70&auto=format&fit=crop" width="800" height="1000" style="object-position:50% 35%" alt="Placeholder portrait: a stylist sitting in a salon chair"><span class="ph on-dark">Placeholder photo</span></div>
           <h3>Team member name</h3>
           <p class="role">Role, e.g. stylist</p>
           <p>Two lines on what they love doing and what clients book them for. Supplied by the salon.</p>
         </div>
         <div class="member">
-          <div class="member-ph"><span class="ph on-dark">Photo</span></div>
+          <div class="member-ph"><img loading="lazy" src="https://images.unsplash.com/photo-1687293233752-ec42de2050db?w=800&q=70&auto=format&fit=crop" width="800" height="1000" style="object-position:50% 20%" alt="Placeholder portrait: a beauty therapist in a treatment room"><span class="ph on-dark">Placeholder photo</span></div>
           <h3>Team member name</h3>
           <p class="role">Role, e.g. beauty therapist</p>
           <p>Two lines on what they love doing and what clients book them for. Supplied by the salon.</p>
